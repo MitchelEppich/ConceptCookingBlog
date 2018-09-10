@@ -30,3 +30,109 @@
     @content;
   }
 }
+
+
+
+/* Custom Style to Marijuana Cooking Book */
+
+body {
+  background-color: #EEE7D8;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+hr {
+  border: 1px solid rgba(71, 52, 37, 0.16);
+}
+
+
+.header {
+  margin: auto;
+  padding-top: 50px;
+  padding-left: 50px;
+  width: 100%;
+  min-height: 100px;
+}
+
+/* ---- HEADER SECTION ----- */
+
+.icon {
+  font-size: 35px;
+  padding-right: 10px;
+}
+
+.site-title {
+  color: #323128;
+  text-transform: uppercase;
+  font-family: 'Bitter', serif;
+  display: inline-block;
+}
+
+.search-section {
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+}
+
+.input-search {
+  background: transparent;
+  width: 95%;
+  padding: 5px;
+}
+
+/* ---- FEATURES SECTION ----- */
+
+.features-section {
+  background: #FEF9DC;
+  display: inline-block;
+  width: 100%;
+}
+
+.features-image {
+  width: 70%;
+  height: 600px;
+}
+
+.features-info {
+  float: right;
+  width: 30%;  
+  text-align: center;
+  padding: 40px;
+  color: #ba693e;
+  font-weight: bold;
+  font-family: 'Bitter', serif;
+}
+
+.features-title {
+  font-size: 25px;
+}
+
+.features-subtitle {
+  font-size: 14px;
+  padding: 40px 0;
+}
+
+/* ---- MORE FEATURES ----- */
+
+.more-features {
+  text-align: center;
+  padding-top: 60px;
+}
+
+.small-btn {
+  padding: 5px;
+  border: 1px solid #6a5746;
+  border-radius: 3px;
+  margin: 10px;
+}
+
+.img-card-recipe {
+  display: inline-block;
+  width: 200px;
+  height: 300px;
+  margin: 5px;  
+  background-position: center center;
+  background-size: cover; 
+}
+

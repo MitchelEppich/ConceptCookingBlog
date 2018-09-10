@@ -13,7 +13,7 @@ export default class MyDocument extends Document {
     return (
       <html>
         <Head>
-          <title>GrowReel</title>
+          <title>Cannabis Cooking Book</title>
           <meta
             name="viewport"
             content="initial-scale=1.0, width=device-width"
@@ -23,6 +23,7 @@ export default class MyDocument extends Document {
             href="https://fonts.googleapis.com/css?family=Lato:100,300"
             rel="stylesheet"
           />
+          <link href="https://fonts.googleapis.com/css?family=Anton|Bitter|Playfair+Display" rel="stylesheet" />
           <link rel="stylesheet" href="/_next/static/style.css" />
          
         </Head>
