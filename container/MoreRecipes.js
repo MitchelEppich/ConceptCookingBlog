@@ -6,11 +6,11 @@ const MoreRecipes = props => {
         return (
             <Layout>
                 <div className="more-features">
-                    <h3>Pot Poppers</h3>
-                    <FilterButton title="Powerfull" />
-                    <FilterButton title="Simple" />
-                    <FilterButton title="Advanced" />
-                    <FilterButton title="Decadent" />
+                    <h3 className="more-features-title">Pot Poppers</h3>
+                    <FilterButton icon="far fa-cannabis" title="Powerfull" />
+                    <FilterButton icon="far fa-utensil-spoon" title="Simple" />
+                    <FilterButton icon="fal fa-function" title="Advanced" />
+                    <FilterButton icon="fal fa-band-aid" title="Decadent" />
                 </div>
             </Layout>
         );
