@@ -268,3 +268,148 @@ li {
   line-height: 30px;
   color:#7f5703;
 }
+
+
+/* ------- CONTENT RECIPE --------- */
+
+
+.background-img {
+  width: 100%;
+  background-size: cover;
+  position: relative;
+}
+
+.container {
+  width: 1200px;
+  min-height: 800px;
+  margin: 20px 0 50px 0;
+  background: #F2F2F2;
+  border-radius: 5px;
+  color: #413F34;
+  padding: 20px;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.container-area {
+  padding-right: 30px;
+}
+
+.print-icon {
+  float: right;
+  margin-right: 20px;  
+  font-size: 30px;
+}
+
+.title-recipe {
+  padding: 10px 0;
+  
+}
+
+.subtitle-recipe {
+  padding: 10px 0;
+}
+
+.description-recipe {
+  padding: 30px 0px;
+}
+
+.rating-icons {
+  color: #5d866e;
+  font-size: 23px;
+  padding-right: 5px;
+  line-height: 50px;
+  display: inline-block;
+}
+
+.small-text-rating {
+  font-size: 16px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.mini-text-rating {
+  font-size: 9px;
+}
+
+.sidebar-area {
+  padding: 10px;  
+}
+
+.details-section {
+  padding: 10px;  
+}
+
+.details-items {
+  font-weight: bold;
+  float: right;
+  text-transform: uppercase;
+}
+
+.details-recipe {
+  padding: 10px 0;
+  font-weight: bold;  
+}
+
+.serving-section {
+  padding: 10px; 
+  display: inline-block;
+  width: 100%;
+}
+
+.serving-recipe {
+  float: left;
+  padding: 10px 0;
+  font-weight: bold; 
+}
+
+.input-serving-section {
+  float: right;
+}
+
+.input-serving {
+  padding: 10px 10px;
+    border: 1px solid #c4bdae;
+    border-radius: 3px;   
+    color: #4c382d;
+    font-weight: bold;
+}
+
+
+.carousel-steps {  
+  margin: 20px;
+  border-radius: 5px;
+  background: white;
+  height: 330px;
+  box-shadow: 1px 1px 10px #cecece;
+}
+
+.img-steps {
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  float: left;
+  padding: 20px;
+}
+
+.text-recipe-steps {
+  font-size: 14px;
+  padding: 20px;
+}
+
+.progressbar-recipe {
+  width: 100%;
+  height: 30px;
+  background-color: #413f34;
+  text-align: center;
+  line-height: 30px;
+  color: white; 
+}
+
+.list-ingredients {
+  display: block;
+  padding: 20px 0 0 0;
+
+}

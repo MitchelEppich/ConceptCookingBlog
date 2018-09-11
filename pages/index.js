@@ -15,20 +15,29 @@ import RecipeCards from "../components/RecipeCards";
 import Info from "../components/Info";
 import Contact from "../components/Contact";
 
+import RecipeSection from "../components/RecipeSection";
+
 
 
 class Index extends Component {
   render() {
     return (
       <Layout >
-        <Header 
-        icon="far fa-utensils icon"
-        siteName="Marijuana Cooking Book"
+         <Header 
+            icon="far fa-utensils icon"
+            siteName="Marijuana Cooking Book"
         />        
         <SearchBar 
-        icon="fas fa-search search-icon"
-        placeholder="Search for anything..."
+            icon="fas fa-search search-icon"
+            placeholder="Search for anything..."
         />
+        <RecipeSection />
+        
+        
+        
+        
+        
+        {/*
         <Features  />
         <MoreRecipes 
         moreRecipesTitle="Pot Poppers"
@@ -39,7 +48,7 @@ class Index extends Component {
         title="Check out our Grow Reel episodes for more information."
         url="#"
         urlText="Our Reel" />
-        <Contact />
+        <Contact /> */}
         
       </Layout>
     );

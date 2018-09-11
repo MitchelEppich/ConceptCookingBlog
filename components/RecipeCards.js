@@ -7,20 +7,20 @@ const RecipeCards = props => {
             <Layout>
                 <div className="more-recipes">
                    <RecipeItem 
-                   imgsrc="../../static/img/img1.jpg"
-                   subtitle="This is a special recipe that will make you be crazy" 
+                        imgsrc="../../static/img/img1.jpg"
+                        subtitle="This is a special recipe that will make you be crazy" 
                    />  
                    <RecipeItem 
-                   imgsrc="../../static/img/img2.jpg"
-                   subtitle="This is a special recipe that will make you be crazy" 
+                        imgsrc="../../static/img/img2.jpg"
+                        subtitle="This is a special recipe that will make you be crazy" 
                    />
                    <RecipeItem 
-                   imgsrc="../../static/img/img3.jpg"
-                   subtitle="This is a special recipe that will make you be crazy" 
+                        imgsrc="../../static/img/img3.jpg"
+                        subtitle="This is a special recipe that will make you be crazy" 
                    />
                    <RecipeItem 
-                   imgsrc="../../static/img/img4.jpg"
-                   subtitle="This is a special recipe that will make you be crazy" 
+                        imgsrc="../../static/img/img4.jpg"
+                        subtitle="This is a special recipe that will make you be crazy" 
                    />                 
                 </div>
                 <div className="flex justify-center">
