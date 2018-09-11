@@ -31,7 +31,10 @@ class Index extends Component {
             icon="fas fa-search search-icon"
             placeholder="Search for anything..."
         />
-        <RecipeSection />
+        <RecipeSection recipe={{
+          title: "Test",
+          subtitle: "Wrapped in Maple Bacon and Sleepy Time Butter"
+        }}/>
         
         
         

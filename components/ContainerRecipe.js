@@ -5,10 +5,10 @@ const ContainerRecipe = props => {
     return (
         <Layout>
             <div className="container">                
-                <h1 className="title-recipe">Brasied Asparagus</h1>
+                <h1 className="title-recipe">{props.recipe.title}</h1>
                 <i class="fal fa-print print-icon"></i>
            
-                <p className="subtitle-recipe">&mdash; Wrapped in Maple Bacon and Sleepy Time Butter</p>
+                <p className="subtitle-recipe">&mdash; {props.recipe.subtitle}</p>
                 <div className="rating-icons">
                     <i class="fas fa-cannabis rating-icons"></i>
                     <i class="fas fa-cannabis rating-icons"></i>
@@ -43,8 +43,8 @@ const ContainerRecipe = props => {
                             </div>                            
                         </div>
                         <div id="myProgress">
-                                <div className="progressbar-recipe">100%</div>
-                            </div>
+                            <div className="progressbar-recipe">100%</div>
+                        </div>
                         
                         
                     </div>

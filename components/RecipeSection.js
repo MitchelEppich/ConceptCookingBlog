@@ -8,7 +8,7 @@ const RecipeSection = props => {
             <Layout>
                 <ImageHeader srcUrl="https://8zxa3etwpf-flywheel.netdna-ssl.com/wp-content/uploads/FOK_Coliflower8384-WP.jpg" />
                     <div>
-                        <ContainerRecipe />
+                        <ContainerRecipe recipe={props.recipe} subtitle={props.subtitle}/>
                     </div>                             
                 
             </Layout>
