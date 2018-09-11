@@ -39,7 +39,7 @@ body {
   background-color: #EEE7D8;
   margin: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Bitter', Arial, serif;  
 }
 
 hr {
@@ -47,8 +47,19 @@ hr {
 }
 
 a {
-  color: #323128;
+  color: #424034;
 }
+
+ul {
+  list-style: none; 
+}
+
+li {
+  padding: 5px;
+}
+
+/* ---- HEADER SECTION ---- */
+
 
 .header {
   margin: auto;
@@ -58,24 +69,23 @@ a {
   min-height: 100px;
 }
 
-/* ---- HEADER SECTION ----- */
-
 .icon {
   font-size: 35px;
-  padding-right: 10px;
+  color: #424034;
 }
 
 .site-title {
-  color: #323128;
+  color: #424034;
   text-transform: uppercase;
   font-family: 'Bitter', serif;
   display: inline-block;
+  padding-left: 5px;
 }
 
 .search-section {
-  width: 80%;
+  width: 85%;
   margin: auto;
-  padding: 20px;
+  padding: 20px 0 40px 0;
 }
 
 .input-search {
@@ -94,26 +104,28 @@ a {
 
 .features-image {
   width: 70%;
-  height: 600px;
+  height: 70%;
 }
 
 .features-info {
   float: right;
   width: 30%;  
   text-align: center;
-  padding: 40px;
-  color: #ba693e;
+  padding: 30px;
+  margin-top: 10%;
+  color: #7F5703;
   font-weight: bold;
   font-family: 'Bitter', serif;
 }
 
 .features-title {
-  font-size: 25px;
+  font-size: 42px;
 }
 
 .features-subtitle {
-  font-size: 14px;
-  padding: 40px 0;
+  font-size: 15px;
+  padding: 40px;
+  color: #424034;
 }
 
 /* ---- MORE FEATURES ----- */
@@ -123,15 +135,37 @@ a {
   padding-top: 60px;
 }
 
-h3.more-features-title {
+.more-features-title {
   padding: 15px;
+  color: #4c382d;
 }
 
 .small-btn {
-  padding: 10px;
-  border: 1px solid #6a5746;
+  padding: 10px 10px;
+  border: 1px solid #C4BDAE;
   border-radius: 3px;
   margin: 10px;
+  color: #4c382d;
+  font-weight: bold;
+}
+
+.text-button {
+  font-size: 14px;
+  font-weight: bold;
+  font-family: 'Bitter', serif;
+  text-transform: uppercase;
+  color: #4c382d;
+}
+
+.icon-button {
+  text-align: left;
+  margin-right: 15px;
+}
+
+.more-recipes {
+  text-align: center;
+  max-width: 1120px;
+  margin: auto;
 }
 
 .img-card-recipe {
@@ -143,3 +177,94 @@ h3.more-features-title {
   background-size: cover; 
 }
 
+.recipe-item {
+  display: inline-block;
+  width: 205px;
+  text-align: center;
+  margin: 1%;
+}
+
+.recipe-subtitle {
+  text-align: left;
+  color: #7f5703;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: 'Bitter', serif;
+}
+
+.load-more-button {
+  padding: 15px 40px;
+  text-align: center;
+  border: 1px solid #c4bdae;
+  border-radius: 3px;
+  margin: 50px 0; 
+}
+
+/* ---- INFO SECTION ---- */
+
+.info-section {
+  text-align: center;
+  background-color: #FEF9DC;
+  padding: 30px;
+  height: 225px;
+  color: #7F5703;
+}
+
+.info-title {
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+.info-subtitle {
+  padding-top: 20px;
+}
+
+.contact-section {
+  max-width: 1120px;
+  height: 220px;
+  margin: auto;
+}
+
+.contact-links {
+  font-size: 25px;
+  color: #7f5703;
+  float: left;
+  margin-top: 50px;
+  padding-left: 180px;
+  text-decoration: none;
+}
+
+.link-list {
+  padding: 15px;  
+}
+
+.link-item {  
+  text-decoration: none;
+  color: #7f5703;
+}
+
+.contact-form {
+  float: right;
+}
+
+.contact-field {
+  background: #fef9dc;
+  padding: 15px;
+  float: right;
+  width: 300px;
+  margin-top: 100px;
+  margin-right: 250px;
+  border-bottom: 2px solid #4c382d;
+}
+
+.copyright {  
+  text-align: right;
+  max-width: 1120px;
+  margin: auto;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 30px;
+  color:#7f5703;
+}

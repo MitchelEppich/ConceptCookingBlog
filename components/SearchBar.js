@@ -6,8 +6,8 @@ const SearchBar = props => {
             <Layout>
                 <div className="search-section">
                     <hr/>
-                        <i className="fas fa-search"></i>
-                        <input className="input-search" placeholder="Search for anything..."></input>
+                        <i className={props.icon}></i>
+                        <input className="input-search" placeholder={props.placeholder}></input>
                     <hr/>
                 </div>
             </Layout>

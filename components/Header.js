@@ -5,10 +5,10 @@ const Header = props => {
         return (
             <Layout>
                 <div className="header">
-                    <span>
+                    <span className="icon">
                         <i className={props.icon}></i>
                     </span> 
-                    <h1 className="site-title">Marijuana Cooking Book</h1>                             
+                    <h1 className="site-title">{props.siteName}</h1>                             
                 </div>
             </Layout>
         );

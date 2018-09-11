@@ -7,11 +7,13 @@ import withData from "../lib/withData";
 import { connect } from "react-redux";
 import actions from "../store/actions";
 import Layout from "../HOC/Layout";
-import Header from "../container/Header";
-import SearchBar from "../container/SearchBar";
-import Features from "../container/Features";
-import MoreRecipes from "../container/MoreRecipes";
-import RecipeCards from "../container/RecipeCards";
+import Header from "../components/Header";
+import SearchBar from "../components/SearchBar";
+import Features from "../components/Features";
+import MoreRecipes from "../components/MoreRecipes";
+import RecipeCards from "../components/RecipeCards";
+import Info from "../components/Info";
+import Contact from "../components/Contact";
 
 
 
@@ -19,11 +21,25 @@ class Index extends Component {
   render() {
     return (
       <Layout >
-        <Header icon="far fa-utensils icon"/>        
-        <SearchBar/>
-        <Features />
-        <MoreRecipes />
+        <Header 
+        icon="far fa-utensils icon"
+        siteName="Marijuana Cooking Book"
+        />        
+        <SearchBar 
+        icon="fas fa-search search-icon"
+        placeholder="Search for anything..."
+        />
+        <Features  />
+        <MoreRecipes 
+        moreRecipesTitle="Pot Poppers"
+        />
         <RecipeCards />
+        <Info 
+        subtitle="Need more recipes?" 
+        title="Check out our Grow Reel episodes for more information."
+        url="#"
+        urlText="Our Reel" />
+        <Contact />
         
       </Layout>
     );
