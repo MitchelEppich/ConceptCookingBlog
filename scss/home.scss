@@ -85,7 +85,13 @@ li {
 .search-section {
   width: 85%;
   margin: auto;
-  padding: 20px 0 40px 0;
+  padding: 20px 0;
+}
+
+.search-icon {
+  font-size: 25px;
+  color: #424034;
+  align-items: baseline;
 }
 
 .input-search {
@@ -104,7 +110,11 @@ li {
 
 .features-image {
   width: 70%;
-  height: 70%;
+  height: 550px;
+  background-size: cover;
+  position: relative;
+  object-fit: cover;
+  object-position: center;
 }
 
 .features-info {
@@ -275,8 +285,11 @@ li {
 
 .background-img {
   width: 100%;
+  height: 600px;
   background-size: cover;
   position: relative;
+  object-fit: cover;
+  object-position: center;
 }
 
 .container {
@@ -288,7 +301,7 @@ li {
   color: #413F34;
   padding: 20px;
   position: absolute;
-  top: 70%;
+  top: 65%;
   left: 50%;
   transform: translate(-50%);
 }
@@ -377,21 +390,49 @@ li {
     font-weight: bold;
 }
 
+.carousel-component {
+  height: 330px;
+  position: relative;
+  margin-bottom: 15px;
+}
 
 .carousel-steps {  
-  margin: 20px;
-  border-radius: 5px;
-  background: white;
-  height: 330px;
-  box-shadow: 1px 1px 10px #cecece;
+  width: 670px;
+  height: 100%;
+  margin: auto;
+}
+
+.arrow-right {
+  float: right;
+  width: 30px;
+  height: 60px;
+  line-height: 60px;
+  position: absolute;
+  top: 43%;
+  right: 10px;
+}
+
+.arrow-left {
+  float: left;
+  width: 30px;
+  height: 60px;
+  line-height: 60px;
+  position: absolute;
+  top: 43%;
+  left: 10px;
+}
+
+.step-number-text {
+  padding: 20px 0;
 }
 
 .img-steps {
-  width: 300px;
-  height: 300px;
-  overflow: hidden;
+  width: 240px;
+  height: 330px;
   float: left;
-  padding: 20px;
+  padding-right: 10px;
+  object-fit: cover; 
+  object-position: center;
 }
 
 .text-recipe-steps {
@@ -410,6 +451,28 @@ li {
 
 .list-ingredients {
   display: block;
-  padding: 20px 0 0 0;
+  padding: 10px;
+}
 
+.ingredients-checkbox {
+    vertical-align: middle;
+    margin-right: 30px;
+}
+
+.progress-bar{
+  display: flex;
+  width: 100%;
+  height: 12px;
+}
+
+.progress-item {
+  width: 100px;
+  background-color: #EEE7D8;
+  height: 12px;
+  display: block;
+  margin: 0 3px;
+}
+
+.item-fulled {  
+  background-color: #413F34;
 }

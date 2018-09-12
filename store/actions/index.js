@@ -19,10 +19,16 @@ const imports = {
 };
 
 const actionTypes = {
+  MODIFY_STEP:"MODIFY_STEP"
 };
 
 const actions = {
-
+  modifyStep: (val) => {
+    return {
+      type: actionTypes.MODIFY_STEP,
+      val: val
+    }  
+  }
 };
 
 const query = {
