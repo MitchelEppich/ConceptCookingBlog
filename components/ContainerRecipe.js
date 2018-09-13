@@ -5,10 +5,28 @@ const ContainerRecipe = props => {
     let showIngredients = () => {
         let arr = [];
         for (let i of props.recipe.ingredients) {
-            arr.push(<span key={i} className="list-ingredients"><input className="ingredients-checkbox" type="checkbox" />{i}</span>)
+            arr.push(<span key={i} className="list-ingredients">
+            <input className="ingredients-checkbox" type="checkbox" />{i}</span>)
         }
         return arr
     }
+
+    let showStepCard = () => {        
+        let step = props.step-1;  
+        let img = props.recipe.stepCard[step].img; 
+        let text = props.recipe.stepCard[step].stepText; 
+             return (
+                <div className="carousel-steps">
+                    <div className="img-steps">                                
+                        <img className="img-steps" key={step} src={img} />
+                    </div>
+                    <div className="text-recipe-steps">
+                        <h4 className="step-number-text">Step {props.step} of {totalSteps()}</h4>
+                        <p className="text-recipe-steps">{text}</p>
+                    </div>                            
+                </div>
+             )                             
+      }  
 
     let showRating = () => {
         let arr = [];       
@@ -24,21 +42,27 @@ const ContainerRecipe = props => {
         return arr        
     }
 
+    let totalSteps = () => {
+       let totalSteps = props.recipe.stepCard.length;   
+       return totalSteps; 
+    }   
 
     let stepsRecipe = () => {
         let arr = [];
         let counter = 0;
-        while (counter < props.recipe.stepTotal) {
-            if (counter < props.recipe.step) {
+        while (counter < props.stepTotal) {
+            if (counter < props.step) {
                 arr.push(<span key={counter} className="progress-item item-fulled"></span>)
             } else {
                 arr.push(<span key={counter} className="progress-item"></span>)
+                
             }
                 counter++
         } 
         return arr
     }
 
+    
 
     return (        
         <Layout>
@@ -63,25 +87,29 @@ const ContainerRecipe = props => {
 
                         <div className="carousel-component">
                             <div className="arrow-left"><a onClick={() => {
-                                if (props.recipe.step > 1) {
+                                if (props.step > 1) {
                                     props.modifyStep(-1)
                                 }
                               }}>
                             <i className="fas fa-arrow-left"></i></a></div>
                             
-                        
-                            <div className="carousel-steps">
+                            {/* {showSteps()} */}
+                            {/* <div className="carousel-steps">
                                 <div className="img-steps">                                
-                                    <img className="img-steps" src={props.recipe.stepImg}/>
+                                {showStepImg()}
                                 </div>
                                 <div className="text-recipe-steps">
                                     <h4 className="step-number-text">Step {props.recipe.step}</h4>
-                                    <p>{props.recipe.stepText}</p>                               
+                                    {showStepText()}
                                 </div>                            
-                            </div>
+                            </div> */}
+
+                            {showStepCard()}
+
                             <div className="arrow-right"><a onClick={() =>  {
-                                 if (props.recipe.step < props.recipe.stepTotal) {
-                                    props.modifyStep(1)
+                                 if (props.step < props.stepTotal) {
+                                    props.modifyStep(1);
+                                   
                                 }
                             }}><i className="fas fa-arrow-right"></i></a></div>
 

@@ -433,6 +433,7 @@ li {
   padding-right: 10px;
   object-fit: cover; 
   object-position: center;
+  transition: all 2s linear;
 }
 
 .text-recipe-steps {
@@ -461,12 +462,12 @@ li {
 
 .progress-bar{
   display: flex;
-  width: 100%;
+  width: 750px;
   height: 12px;
 }
 
 .progress-item {
-  width: 100px;
+  width: 100%;
   background-color: #EEE7D8;
   height: 12px;
   display: block;
