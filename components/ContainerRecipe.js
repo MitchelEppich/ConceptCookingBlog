@@ -2,15 +2,18 @@ import React, { Component } from 'react';
 import Layout from "../HOC/Layout";
 
 const ContainerRecipe = props => {
+
     let showIngredients = () => {
         let arr = [];
         for (let i of props.recipe.ingredients) {
-            arr.push(<span key={i} className="list-ingredients">
-            <input className="ingredients-checkbox" type="checkbox" />{i}</span>)
+            let str = `${i.amt * props.serving} ${i.metric} ${i.description} `;
+            arr.push(<span className="list-ingredients">
+            <input className="ingredients-checkbox" type="checkbox" />{str}</span>)            
         }
         return arr
     }
 
+   
     let showStepCard = () => {        
         let step = props.step-1;  
         let img = props.recipe.stepCard[step].img; 
@@ -61,8 +64,7 @@ const ContainerRecipe = props => {
         } 
         return arr
     }
-
-    
+  
 
     return (        
         <Layout>
@@ -70,9 +72,10 @@ const ContainerRecipe = props => {
                 <img className="background-img" src={props.recipe.featuredImage} />
             </div>
             <div className="container">                
-                <h1 className="title-recipe">{props.recipe.title}</h1>
-                <i className="fal fa-print print-icon"></i>
-           
+                <div className="header-recipe">
+                    <h1 className="title-recipe">{props.recipe.title}</h1>
+                    <i className="fal fa-print print-icon"></i>
+                </div>
                 <p className="subtitle-recipe">&mdash; {props.recipe.subtitle}</p>
                 <div className="rating-icons">
                     {showRating()}
@@ -81,47 +84,32 @@ const ContainerRecipe = props => {
                 <hr/>
 
                 <div className="flex mb-4">
-                    <div className="w-4/5 h-12 container-area">
-                        <p className="description-recipe"> {props.recipe.description}</p>
+                    <div className="w-4/5 h-12 container-area"> 
+                        <p className="description-recipe">{props.recipe.description}</p>
                         <hr />
 
                         <div className="carousel-component">
-                            <div className="arrow-left"><a onClick={() => {
-                                if (props.step > 1) {
-                                    props.modifyStep(-1)
-                                }
-                              }}>
-                            <i className="fas fa-arrow-left"></i></a></div>
-                            
-                            {/* {showSteps()} */}
-                            {/* <div className="carousel-steps">
-                                <div className="img-steps">                                
-                                {showStepImg()}
-                                </div>
-                                <div className="text-recipe-steps">
-                                    <h4 className="step-number-text">Step {props.recipe.step}</h4>
-                                    {showStepText()}
-                                </div>                            
-                            </div> */}
+                            <div className="arrow-left">
+                                <a onClick={() => {
+                                    if (props.step > 1) {
+                                        props.modifyStep(-1) }}}>                                
+                                    <i className="fas fa-arrow-left"></i>
+                                </a>
+                            </div>                          
 
                             {showStepCard()}
 
-                            <div className="arrow-right"><a onClick={() =>  {
-                                 if (props.step < props.stepTotal) {
-                                    props.modifyStep(1);
-                                   
-                                }
-                            }}><i className="fas fa-arrow-right"></i></a></div>
-
+                            <div className="arrow-right">
+                                <a onClick={() =>  {
+                                    if (props.step < props.stepTotal) {
+                                        props.modifyStep(1);  }}}>
+                                    <i className="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
                         </div>
 
-                        <div className="progress-bar"> 
-                            
-                            {stepsRecipe()}                            
+                        <div className="progress-bar">{stepsRecipe()}</div>                                              
 
-                        </div>
-                                               
-                        
                     </div>
                     <div className="w-2/5 h-12 sidebar-area">
                         <div className="details-section">                        
@@ -132,9 +120,23 @@ const ContainerRecipe = props => {
                         <div className="serving-section">
                             <div className="serving-recipe">Serving</div>
                             <div className="input-serving-section">
-                                <button className="input-serving">+</button>
-                                <input className="input-serving" maxLength="2" size="2"></input>
-                                <button className="input-serving">-</button>
+                                <a className="input-serving" onClick={() =>  {
+                                   
+                                        props.modifyServing(1);  }}>                                    
+                                
+
+                                    <i className="fas fa-plus"></i>
+                                </a>                                
+                                    
+                                <p className="display-quantity" id="countServing"> {props.serving} </p>
+                                
+                                <a className="input-serving" onClick={() =>  {
+                                    if (props.serving > 1) {
+                                        props.modifyServing(-1); } }}>
+
+                              
+                                    <i className="fas fa-minus"></i>
+                                </a>
                             </div>
                         </div>
                         <hr/>

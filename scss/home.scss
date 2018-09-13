@@ -310,14 +310,22 @@ li {
   padding-right: 30px;
 }
 
+.header-recipe {
+  display: inline-block;
+  width: 100%;
+}
+
 .print-icon {
   float: right;
   margin-right: 20px;  
+  margin-top: 15px;
   font-size: 30px;
 }
 
 .title-recipe {
   padding: 10px 0;
+  width: 90%;
+  float: left;
   
 }
 
@@ -380,6 +388,7 @@ li {
 
 .input-serving-section {
   float: right;
+  display: inline-flex;
 }
 
 .input-serving {
@@ -388,6 +397,14 @@ li {
     border-radius: 3px;   
     color: #4c382d;
     font-weight: bold;
+}
+
+.display-quantity {
+  line-height: 40px;
+  background: white;
+  width: 55px;
+  text-align: center;
+  border: 1px solid #cecece;
 }
 
 .carousel-component {
@@ -433,7 +450,7 @@ li {
   padding-right: 10px;
   object-fit: cover; 
   object-position: center;
-  transition: all 2s linear;
+  transition: all 0.2s linear;
 }
 
 .text-recipe-steps {

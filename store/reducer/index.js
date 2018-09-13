@@ -11,6 +11,7 @@ import { updateObject } from "../utility";
 
 const initialState = {
   step: 1,
+  serving: 1,
     recipe:{
     featuredImage: "https://natalietamara.co.uk/wp-content/uploads/2017/11/Creamy-Pan-Fried-Gnocchi-Vegan-recipe-3.jpg",
     title: "Marijuana Maple Bacon",
@@ -31,11 +32,11 @@ const initialState = {
      
     }],
     ingredients: [
-      "30 g marijuana",
-      "15 Slices of Bacon",
-      "150 ml of olive oil",
-      "4 tomatoes",
-      "50 ml of Maple"                            
+      {amt: 30, metric: "g", description: "marijuana"},
+      {amt: 15, metric: "slices", description: "bacon"},
+      {amt: 150, metric: "ml of", description: "olive oil"},
+      {amt: 4, metric: "", description: "tomatoes"},
+      {amt: 50, metric: "ml of", description: "maple"}                            
     ],
   }
 };
@@ -45,6 +46,10 @@ const indexReducer = (state = initialState, action) => {
     case actionTypes.MODIFY_STEP:
       return updateObject(state, {
         step: state.step + action.val
+      })
+      case actionTypes.MODIFY_SERVING:
+      return updateObject(state, {
+        serving: state.serving + action.val
       })
     // case actionTypes.MODIFY_STEP: // BASE CASE
     //   return updateObject(state, {})

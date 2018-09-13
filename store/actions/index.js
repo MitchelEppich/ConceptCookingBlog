@@ -19,7 +19,8 @@ const imports = {
 };
 
 const actionTypes = {
-  MODIFY_STEP:"MODIFY_STEP"
+  MODIFY_STEP:"MODIFY_STEP",
+  MODIFY_SERVING:"MODIFY_SERVING"
 };
 
 const actions = {
@@ -28,6 +29,12 @@ const actions = {
       type: actionTypes.MODIFY_STEP,
       val: val
     }  
+  },
+  modifyServing: (val) => {
+    return {
+      type: actionTypes.MODIFY_SERVING,
+      val: val
+    }
   }
 };
 

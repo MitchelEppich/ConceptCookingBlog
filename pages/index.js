@@ -19,9 +19,9 @@ import RecipeSection from "../components/RecipeSection";
 
 class Index extends Component {
 
-  componentDidMount() {
-    console.log(this.props)
-  }
+  // componentDidMount() {
+  //   console.log(this.props)
+  // }
 
   render() {
     return (
@@ -34,19 +34,21 @@ class Index extends Component {
             icon="far fa-search"
             placeholder="Search for anything..."
         />
-        <RecipeSection 
+        {/* <RecipeSection 
           modifyStep={this.props.modifyStep}
+          modifyServing={this.props.modifyServing}
+          serving={this.props.serving}
           recipe={this.props.recipe}
           step={this.props.step}
           stepTotal={this.props.recipe.stepCard.length}
-          />
+          /> */}
         
         
         
         
         
         
-        {/* <Features  />
+        <Features  />
         <MoreRecipes 
         moreRecipesTitle="Pot Poppers"
         />
@@ -56,7 +58,7 @@ class Index extends Component {
         title="Check out our Grow Reel episodes for more information."
         url="#"
         urlText="Our Reel" />
-        <Contact /> */}
+        <Contact />
         
       </Layout>
     );
@@ -65,7 +67,8 @@ class Index extends Component {
 
 const mapDispatchToProps = dispatch => {
   return {
-    modifyStep: (val) => dispatch(actions.modifyStep(val))
+    modifyStep: (val) => dispatch(actions.modifyStep(val)),
+    modifyServing: (val) => dispatch(actions.modifyServing(val))
   };
 };
 
