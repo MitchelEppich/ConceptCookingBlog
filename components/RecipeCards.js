@@ -7,19 +7,38 @@ import RecipeItem from "./RecipeItem";
 const RecipeCards = props => {        
     
     let showRecipeItem = () => {
-        let arr = [];
-        for (let i = 0; i < 4; i++){            
-            arr.push(<RecipeItem 
-                imgsrc={props.recipe[i].featuredImage}
-                subtitle={`${props.recipe[i].title} ${props.recipe[i].subtitle}`}
-                prepTime={`${props.recipe[i].prepTime} M`} 
-                key={i}
-                currentRecipe={i}
-                                             
-           />)            
-        } return arr
-    }
-
+            let arr = [];
+            for (let i = 0; i < 4; i++){          
+                arr.push(<RecipeItem  
+                    imgsrc={props.recipes[i].featuredImage}
+                    subtitle={`${props.recipes[i].title} ${props.recipes[i].subtitle}`}
+                    prepTime={`${props.recipes[i].prepTime} M`} 
+                    key={i}
+                    index={i} 
+                    getCurrentRecipe={props.getCurrentRecipe}
+                    rating={props.recipes.rating}                   
+                />)          
+                } return arr 
+             }
+             
+    
+    // let loadMore = () => {
+    // let arr = [];
+    // for (let i = 4; i < 8; i++){          
+    //     arr.push(
+    //     <RecipeItem  
+    //         imgsrc={props.recipes[i].featuredImage}
+    //         subtitle={`${props.recipes[i].title} ${props.recipes[i].subtitle}`}
+    //         prepTime={`${props.recipes[i].prepTime} M`} 
+    //         key={i}
+    //         index={i} 
+    //         getCurrentRecipe={props.getCurrentRecipe}
+    //         rating={props.recipes.rating}                   
+    //     />)          
+    //     } return arr 
+    // }
+      
+    
         return (
             
             <Layout>
@@ -27,9 +46,10 @@ const RecipeCards = props => {
                 
                    {showRecipeItem()}
                   
+                  
                 </div>
                 <div className="flex justify-center">
-                    <button className="load-more-button">More Baked Treats</button>
+                    <button className="load-more-button"> More Baked Treats</button>
                 </div>    
             </Layout>
             

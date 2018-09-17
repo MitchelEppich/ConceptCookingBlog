@@ -21,7 +21,7 @@ const imports = {
 const actionTypes = {
   MODIFY_STEP:"MODIFY_STEP",
   MODIFY_SERVING:"MODIFY_SERVING",
-  CURRENT_RECIPE: "CURRENT_RECIPE"
+  GET_CURRENT_RECIPE: "GET_CURRENT_RECIPE"  
 };
 
 const actions = {
@@ -37,9 +37,9 @@ const actions = {
       val: val
     }
   },
-  currentRecipe: (val) => {
+  getCurrentRecipe: (val) => {  
     return {
-      type: actionTypes.CURRENT_RECIPE,
+      type: actionTypes.GET_CURRENT_RECIPE,
       val: val
     }
   }

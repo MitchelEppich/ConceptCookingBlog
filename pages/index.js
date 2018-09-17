@@ -22,7 +22,7 @@ import Popup from "../components/Popup";
 
 class Index extends Component {
   // componentDidMount() {
-  //   console.log(this.props)
+  //   console.log(this.props.currentRecipe)
   // }
 
   render() {
@@ -36,30 +36,38 @@ class Index extends Component {
           <SearchBar 
               icon="far fa-search"
               placeholder="Search for anything..."
-          />    
-          <Features  />
-          {/* <ContainerRecipe 
+          />  
+          <ContainerRecipe 
               modifyStep={this.props.modifyStep}
+              setRecipe={this.props.setRecipe}
               modifyServing={this.props.modifyServing}
               serving={this.props.serving}
-              recipe={this.props.recipe[3]}
+              recipes={this.props.recipes}
               step={this.props.step}
-              stepTotal={this.props.recipe[0].stepCard.length}
-              />  */}
-          <MoreRecipes 
-            moreRecipesTitle="Pot Poppers"   
-            currentRecipe={this.props.currentRecipe}   
-          />
-          <RecipeCards 
-            {...this.props} 
-          />
-          <Info 
-            subtitle="Need more recipes?" 
-            title="Check out our Grow Reel episodes for more information."
-            url="#"
-            urlText="Our Reel" />
-          <Contact />         
-         
+              getCurrentRecipe={this.props.getCurrentRecipe}
+              currentRecipe={this.props.currentRecipe}
+              rating={this.props.recipes.rating}
+              /> 
+
+          {this.props.currentRecipe == null ? 
+          <div>
+            <Features  />
+            <MoreRecipes 
+              moreRecipesTitle="Pot Poppers" 
+            />
+            <RecipeCards 
+              {...this.props} 
+              
+            />
+            <Info 
+              subtitle="Need more recipes?" 
+              title="Check out our Grow Reel episodes for more information."
+              url="#"
+              urlText="Our Reel" />
+            <Contact />    
+          </div> : null }
+          
+          
       </Layout>
     );
   }
@@ -69,7 +77,8 @@ const mapDispatchToProps = dispatch => {
   return {
     modifyStep: (val) => dispatch(actions.modifyStep(val)),
     modifyServing: (val) => dispatch(actions.modifyServing(val)),
-    currentRecipe: (val) => dispatch(actions.currentRecipe(val))
+    getCurrentRecipe: (val) => dispatch(actions.getCurrentRecipe(val))
+    
   };
 };
 
