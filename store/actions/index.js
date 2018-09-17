@@ -20,7 +20,8 @@ const imports = {
 
 const actionTypes = {
   MODIFY_STEP:"MODIFY_STEP",
-  MODIFY_SERVING:"MODIFY_SERVING"
+  MODIFY_SERVING:"MODIFY_SERVING",
+  CURRENT_RECIPE: "CURRENT_RECIPE"
 };
 
 const actions = {
@@ -33,6 +34,12 @@ const actions = {
   modifyServing: (val) => {
     return {
       type: actionTypes.MODIFY_SERVING,
+      val: val
+    }
+  },
+  currentRecipe: (val) => {
+    return {
+      type: actionTypes.CURRENT_RECIPE,
       val: val
     }
   }

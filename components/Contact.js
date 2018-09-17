@@ -6,7 +6,7 @@ const Contact = props => {
     return (
         <Layout>
             <div className="contact-section">
-                <div className="contact-links">
+                <div className="links-section">
                     <Links 
                         url="#"
                         textLink="Heighten Your"
@@ -23,8 +23,7 @@ const Contact = props => {
                 <div className="contact-field flex justify-between">                
                     <input type="text" className="w-full h-full bg-transparent" placeholder="Insert your email"></input><i className="fas fa-arrow-right"></i>
                 </div>                
-            </div>
-            <div className="copyright">by Mitchel Eppich</div>
+            </div>           
         </Layout>
     )
 }

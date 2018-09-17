@@ -2,8 +2,10 @@ import React, { Component } from 'react';
 import Layout from "../HOC/Layout";
 import FilterButton from "./FilterButton";
 
-const MoreRecipes = props => {    
-        return (
+
+const MoreRecipes = props => {        
+        return (           
+            
             <Layout>
                 <div className="more-features">
                     <h3 className="more-features-title">{props.moreRecipesTitle}</h3>
@@ -13,8 +15,9 @@ const MoreRecipes = props => {
                     <FilterButton icon="fal fa-band-aid" title="Decadent" />
                 </div>                
             </Layout>
+            
         );
     }
 
-
+    
 export default MoreRecipes;

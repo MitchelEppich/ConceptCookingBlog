@@ -55,7 +55,7 @@ const ContainerRecipe = props => {
         let counter = 0;
         while (counter < props.stepTotal) {
             if (counter < props.step) {
-                arr.push(<span key={counter} className="progress-item item-fulled"></span>)
+                arr.push(<span key={counter} className="progress-item progressed-item"></span>)
             } else {
                 arr.push(<span key={counter} className="progress-item"></span>)
                 
@@ -68,10 +68,11 @@ const ContainerRecipe = props => {
 
     return (        
         <Layout>
+            <div className="z-40 w-full h-full bg-black"></div>
             <div>
                 <img className="background-img" src={props.recipe.featuredImage} />
             </div>
-            <div className="container">                
+            <div className="container z-50">                
                 <div className="header-recipe">
                     <h1 className="title-recipe">{props.recipe.title}</h1>
                     <i className="fal fa-print print-icon"></i>
@@ -108,7 +109,9 @@ const ContainerRecipe = props => {
                             </div>
                         </div>
 
-                        <div className="progress-bar">{stepsRecipe()}</div>                                              
+                        <div className="progress-bar">
+                            {stepsRecipe()}
+                        </div>                                              
 
                     </div>
                     <div className="w-2/5 h-12 sidebar-area">
@@ -120,21 +123,16 @@ const ContainerRecipe = props => {
                         <div className="serving-section">
                             <div className="serving-recipe">Serving</div>
                             <div className="input-serving-section">
-                                <a className="input-serving" onClick={() =>  {
-                                   
-                                        props.modifyServing(1);  }}>                                    
-                                
-
+                                <a className="input-serving" onClick={() => {                                   
+                                        props.modifyServing(1);  }}>                                  
                                     <i className="fas fa-plus"></i>
                                 </a>                                
                                     
                                 <p className="display-quantity" id="countServing"> {props.serving} </p>
                                 
-                                <a className="input-serving" onClick={() =>  {
+                                <a className="input-serving" onClick={() => {
                                     if (props.serving > 1) {
                                         props.modifyServing(-1); } }}>
-
-                              
                                     <i className="fas fa-minus"></i>
                                 </a>
                             </div>
@@ -143,11 +141,10 @@ const ContainerRecipe = props => {
                         {showIngredients()}
                     </div>
                 </div> 
-
-
-               
+                                            
             </div>
         </Layout>
+        
     );
 }
 
