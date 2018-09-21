@@ -21,7 +21,8 @@ const imports = {
 const actionTypes = {
   MODIFY_STEP:"MODIFY_STEP",
   MODIFY_SERVING:"MODIFY_SERVING",
-  GET_CURRENT_RECIPE: "GET_CURRENT_RECIPE"  
+  GET_CURRENT_RECIPE: "GET_CURRENT_RECIPE", 
+  MODIFY_SLIDER: "MODIFY_SLIDER" 
 };
 
 const actions = {
@@ -42,7 +43,13 @@ const actions = {
       type: actionTypes.GET_CURRENT_RECIPE,
       val: val
     }
-  }
+  },
+  modifySlider: (val) => {
+    return {
+      type: actionTypes.MODIFY_SLIDER,
+      val: val
+    }  
+  },
 };
 
 const query = {

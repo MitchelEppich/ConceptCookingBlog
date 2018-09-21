@@ -1,3 +1,5 @@
+/* MORE RECIPES TITLE AND BUTTONS */
+
 import React, { Component } from 'react';
 import Layout from "../HOC/Layout";
 import FilterButton from "./FilterButton";

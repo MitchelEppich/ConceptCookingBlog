@@ -7,7 +7,7 @@ const RecipeItem = props => {
         
         <div className="recipe-item cursor-pointer" onClick={()=> {         
             let clicked = props.index;
-            props.getCurrentRecipe(clicked)
+            props.getCurrentRecipe(clicked)           
         }}>
             <img className="img-card-recipe" src={props.imgsrc}/>
             <div className="time-preparation">

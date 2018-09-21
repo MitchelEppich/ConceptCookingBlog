@@ -23,12 +23,12 @@ class Popup extends React.Component {
 
     return (
         <ContainerRecipe 
-        modifyStep={this.props.modifyStep}
-        modifyServing={this.props.modifyServing}
-        serving={this.props.serving}
-        recipe={this.props.recipe[0]}
-        step={this.props.step}
-        stepTotal={this.props.recipe[0].stepCard.length}
+          modifyStep={this.props.modifyStep}
+          modifyServing={this.props.modifyServing}
+          serving={this.props.serving}
+          recipe={this.props.recipe[0]}
+          step={this.props.step}
+          stepTotal={this.props.recipe[0].stepCard.length}
         />
     );
   }

@@ -17,8 +17,6 @@ import Info from "../components/Info";
 import Contact from "../components/Contact";
 import ContainerRecipe from "../components/ContainerRecipe";
 
-import RecipeSection from "../components/RecipeSection";
-import Popup from "../components/Popup";
 
 class Index extends Component {
   // componentDidMount() {
@@ -28,7 +26,7 @@ class Index extends Component {
   render() {
 
     return (
-      <Layout >                
+      <Layout >               
           <Header 
               icon="far fa-utensils icon"
               siteName="Marijuana Cooking Book"
@@ -43,7 +41,7 @@ class Index extends Component {
               modifyServing={this.props.modifyServing}
               serving={this.props.serving}
               recipes={this.props.recipes}
-              step={this.props.step}
+              step={this.props.step} 
               getCurrentRecipe={this.props.getCurrentRecipe}
               currentRecipe={this.props.currentRecipe}
               rating={this.props.recipes.rating}
@@ -51,7 +49,12 @@ class Index extends Component {
 
           {this.props.currentRecipe == null ? 
           <div>
-            <Features  />
+            <Features              
+              featuresSlide={this.props.featuresSlide}    
+              featuresSlider={this.props.featuresSlider}  
+              modifySlider={this.props.modifySlider}     
+              slider={this.props.slider}
+            />
             <MoreRecipes 
               moreRecipesTitle="Pot Poppers" 
             />
@@ -62,7 +65,7 @@ class Index extends Component {
             <Info 
               subtitle="Need more recipes?" 
               title="Check out our Grow Reel episodes for more information."
-              url="#"
+              url="http://www.growreel.com"
               urlText="Our Reel" />
             <Contact />    
           </div> : null }
@@ -77,7 +80,8 @@ const mapDispatchToProps = dispatch => {
   return {
     modifyStep: (val) => dispatch(actions.modifyStep(val)),
     modifyServing: (val) => dispatch(actions.modifyServing(val)),
-    getCurrentRecipe: (val) => dispatch(actions.getCurrentRecipe(val))
+    getCurrentRecipe: (val) => dispatch(actions.getCurrentRecipe(val)),
+    modifySlider: (val) => dispatch(actions.modifySlider(val))
     
   };
 };

@@ -39,7 +39,7 @@
 /* Rules below not implemented in browsers yet */
 -o-user-select: none;
 user-select: none;
-}
+} 
 
 
 /* Custom Style to Marijuana Cooking Book */
@@ -108,6 +108,8 @@ li {
   background: transparent;
   width: 95%;
   padding: 5px;
+  margin: 0 10px;
+  outline-color: #424034;
 }
 
 /* ---- FEATURES SECTION ----- */
@@ -116,6 +118,43 @@ li {
   background: #FEF9DC;
   display: inline-block;
   width: 100%;
+  transition: all 0.5s ease;
+}
+
+.feature-arrow-right {
+  float: right;
+  width: 30px;
+  height: 60px;
+  line-height: 100%;
+  position: absolute;
+  top: 48%;
+  right: 10px;
+}
+
+.arrows-slider {
+  font-size: 60px;
+  color: #ece7ca;
+  transition: all 0.5s ease;  
+}
+
+.arrows-slider:hover {
+  font-size: 60px;
+  color: #5c493a;
+}
+
+.feature-arrow-left {
+  float: left;
+  width: 30px;
+  height: 60px;
+  line-height: 100%;
+  position: absolute;
+  top: 48%;  
+  left: 10px;
+}
+
+.arrow-slider-left:hover {
+  font-size: 60px;
+  color: #5c493a;
 }
 
 .features-image {
@@ -131,7 +170,7 @@ li {
   float: right;
   width: 30%;  
   text-align: center;
-  padding: 30px;
+  padding: 20px 45px;
   margin-top: 10%;
   color: #7F5703;
   font-weight: bold;
@@ -148,11 +187,38 @@ li {
   color: #424034;
 }
 
+.bullet-slider {
+  width: 15px;
+  border-radius: 50%;
+  background-color: #928f7c;
+  height: 15px;
+  display: inline-block;
+  margin: 0px 3px;
+  transition: background-color 0.9s ease;
+
+}
+
+.bullet-slider-active {
+  width: 15px;
+  border-radius: 50%;
+  background-color: #424034;
+  height: 15px;
+  display: inline-block;
+  margin: 0px 3px;
+  transition: background-color 0.9s ease;
+}
+
+.bullet-section {
+  text-align: center;
+  margin-top: 10px;
+  cursor: pointer; 
+}
+
 /* ---- MORE FEATURES ----- */
 
 .more-features {
   text-align: center;
-  padding-top: 60px;
+  padding-top: 25px;
 }
 
 .more-features-title {
@@ -188,6 +254,10 @@ li {
   margin: auto;
 }
 
+.load-more-section {
+  transition: all 5s linear;
+}
+
 .img-card-recipe {
   display: inline-block;
   height: 400px; 
@@ -199,12 +269,21 @@ li {
   object-position: center;
 }
 
+
 .recipe-item {
   display: inline-block;
   width: 250px;
   text-align: center;
   margin: 1%;
   position: relative;
+  transform: scale(1) rotate(0deg);
+  transition: transform 0.4s ease;
+  vertical-align: top;
+}
+
+.recipe-item:hover {
+  transform: scale(1.02) rotate(0.5deg);  
+  transition: transform 0.4s ease;
 }
 
 .recipe-subtitle {

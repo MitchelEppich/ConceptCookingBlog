@@ -1,3 +1,6 @@
+/** DISPLAY THE CURRENT RECIPE CONTENT **/
+
+
 import React, { Component } from 'react';
 import Layout from "../HOC/Layout";
 
@@ -29,7 +32,6 @@ const ContainerRecipe = props => {
         }
         return arr
     }
-
 
     
    
@@ -83,7 +85,7 @@ const ContainerRecipe = props => {
   
     return (        
         <Layout>
-            <div className="z-50" style={containerStyle}>
+        <div className="z-50" style={containerStyle}>
             <div>                
                 <img className="background-img" src={recipe.featuredImage} />
             </div>
@@ -93,7 +95,9 @@ const ContainerRecipe = props => {
                     <p onClick={()=> {props.getCurrentRecipe(null)
                         }}><i className="fas fa-times close-icon"></i>
                     </p>
-                    <p onClick={() => {window.print()}}><i className="fal fa-print print-icon" ></i></p>
+                    <p onClick={() => {window.print()}}>
+                        <i className="fal fa-print print-icon" ></i>
+                    </p>
                 </div>
                 <p className="subtitle-recipe">&mdash; {recipe.subtitle}</p>
                 <div className="rating-icons">
@@ -158,8 +162,7 @@ const ContainerRecipe = props => {
                         <hr/>
                         {showIngredients()}
                     </div>
-                </div> 
-                                            
+                </div>                                             
             </div>
         </div>
         </Layout>

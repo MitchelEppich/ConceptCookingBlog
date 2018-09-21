@@ -7,7 +7,7 @@ const Info = props => {
             <div className="info-section">
                 <h3 className="info-subtitle">{props.subtitle}</h3>
                 <h2 className="info-title">{props.title}</h2>
-                <a href="{props.url}">{props.urlText}</a>
+                <a href={props.url} target="_blank">{props.urlText}</a>
             </div>
         </Layout>
     )
