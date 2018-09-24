@@ -3,6 +3,7 @@ import Layout from "../HOC/Layout";
 import Links from "./Links";
 
 const Contact = props => {
+    let emailField = null;
     return (
         <Layout>
             <div className="contact-section">
@@ -21,10 +22,10 @@ const Contact = props => {
                     />                   
                 </div>
                 <div className="contact-field flex justify-between">                
-                    <input type="text" className="w-full h-full bg-transparent" id="email-field" name="email" placeholder="Insert your email"></input>
+                    <input type="text" className="w-full h-full bg-transparent" ref={(inputEmail)=>{emailField = inputEmail}} name="email" placeholder="Insert your email"></input>
                     <button onClick={()=>{
-                        let idEmail = document.querySelector("#email-field");
-                        console.log(idEmail.value)
+                        
+                        console.log(emailField.value)
                     }}>
                     <i className="fas fa-arrow-right"></i>
                     </button>

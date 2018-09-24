@@ -25,7 +25,7 @@ const initialState = {
   {
     featuresImg:"https://wolnekonopie.org/wp-content/uploads/2018/05/weed-apple-pie.jpg",
     featuresTitle:"Maple Bacon",
-    featuresSubtitle:"in Mapel Bacon and Sleepy Time Butter",
+    featuresSubtitle:"in Maple Bacon and Sleepy Time Butter",
     featuresLink:"#",
     featuresTextLink:"LETS TRY IT!"
   }, 
@@ -46,7 +46,7 @@ const initialState = {
       rating: 5,
       description: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
       prepTime: 15,
-      difficulty: "Hard",                      
+      difficulty: "Powerfull",                      
       stepCard: [
         {img: "https://www.marijuana.com/wp-content/uploads/2017/12/holiday-mj.com-67-1.jpg",
         stepText: "1st It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
@@ -80,7 +80,7 @@ const initialState = {
         rating: 3,
         description: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
         prepTime: 45,
-        difficulty: "Medium",                      
+        difficulty: "Advanced",                      
         stepCard: [
           {img: "https://thefreshtoast.com/wp-content/uploads/2016/09/weed-breathalyzer.jpg",
           stepText: "1st It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
@@ -107,7 +107,7 @@ const initialState = {
         rating: 1,
         description: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
         prepTime: 90,
-        difficulty: "Novice",                      
+        difficulty: "Simple",                      
         stepCard: [
           {img: "https://thefreshtoast.com/wp-content/uploads/2016/09/weed-breathalyzer.jpg",
           stepText: "1st It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
@@ -134,7 +134,7 @@ const initialState = {
         rating: 4,
         description: "The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
         prepTime: 20,
-        difficulty: "Novice",                      
+        difficulty: "Decadent",                      
         stepCard: [
           {img: "https://thefreshtoast.com/wp-content/uploads/2016/09/weed-breathalyzer.jpg",
           stepText: "1st It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
@@ -162,7 +162,7 @@ const initialState = {
         rating: 5,
         description: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
         prepTime: 15,
-        difficulty: "Hard",                      
+        difficulty: "Simple",                      
         stepCard: [
           {img: "https://thefreshtoast.com/wp-content/uploads/2016/09/weed-breathalyzer.jpg",
           stepText: "1st It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
@@ -189,7 +189,7 @@ const initialState = {
         rating: 5,
         description: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
         prepTime: 15,
-        difficulty: "Hard",                      
+        difficulty: "Powerfull",                      
         stepCard: [
           {img: "http://how-to-weed.com/wp-content/uploads/2018/01/Marijuana_Weed_Avocado_Toast_Recipe.jpg",
           stepText: "1st It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
@@ -223,7 +223,7 @@ const initialState = {
           rating: 3,
           description: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
           prepTime: 45,
-          difficulty: "Medium",                      
+          difficulty: "Decadent",                      
           stepCard: [
             {img: "https://thefreshtoast.com/wp-content/uploads/2016/09/weed-breathalyzer.jpg",
             stepText: "1st It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
@@ -250,7 +250,7 @@ const initialState = {
           rating: 1,
           description: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
           prepTime: 90,
-          difficulty: "Novice",                      
+          difficulty: "Advanced",                      
           stepCard: [
             {img: "https://thefreshtoast.com/wp-content/uploads/2016/09/weed-breathalyzer.jpg",
             stepText: "1st It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
@@ -277,7 +277,7 @@ const initialState = {
           rating: 4,
           description: "The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
           prepTime: 20,
-          difficulty: "Novice",                      
+          difficulty: "Decadent",                      
           stepCard: [
             {img: "https://thefreshtoast.com/wp-content/uploads/2016/09/weed-breathalyzer.jpg",
             stepText: "1st It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."

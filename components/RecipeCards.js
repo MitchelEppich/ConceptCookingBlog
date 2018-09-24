@@ -58,16 +58,15 @@ const RecipeCards = props => {
 
 
                 
-
-
-    
+        let loadMoreSection = null;  
+           
         return (
             
             <Layout>
                 <div className="more-recipes">
                 
                    {showRecipeItem()}
-                   <div id="load-more-section" className="load-more-section hidden">
+                   <div ref={(loadMore)=>{loadMoreSection = loadMore}} className="load-more-section hidden">
                    {showMoreRecipes()}
                    </div>                  
                   
@@ -75,7 +74,7 @@ const RecipeCards = props => {
                 </div>
                 <div className="flex justify-center">
                     <button className="load-more-button" onClick={()=> {
-                      let loadMoreSection = document.querySelector("#load-more-section");                   
+                    //   let loadMoreSection = document.querySelector("#load-more-section");                   
                       loadMoreSection.classList.remove("hidden")                    
                     }}>More Baked Treats</button>
                 </div>    

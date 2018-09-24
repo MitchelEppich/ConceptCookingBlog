@@ -23,7 +23,7 @@ const Features = props => {
     }
 
     let bulletSlider = () => {
-        let arr = [];
+        let arr = [];         
         let counter = 0;
         while (counter < props.featuresSlide.length) {
             if (counter < props.slider) {
@@ -33,9 +33,8 @@ const Features = props => {
             } else {
                 arr.push(<a key={counter} onClick={() =>  {
                     if (props.slider < props.featuresSlide.length) {
-                        props.modifySlider(1)  }}}><span key={counter} className="bullet-slider"></span></a>)
-                
-            }
+                        props.modifySlider(1) }}}><span key={counter} className="bullet-slider"></span></a>)
+                   }
                 counter++
         } 
         return arr
@@ -45,8 +44,12 @@ const Features = props => {
             <Layout>
                 <div className="feature-arrow-left z-50 cursor-pointer">
                     <a onClick={() => {
+                        
                         if (props.slider > 1) {                        
-                            props.modifySlider(-1) }}}>
+                            props.modifySlider(-1) 
+                        } else { 
+                                props.modifySlider(2)}
+                            }}>
                         <span className="arrows-slider"><i className="fas fa-angle-left"></i></span>
                     </a>
                 </div>
@@ -54,7 +57,10 @@ const Features = props => {
                 <div className="feature-arrow-right cursor-pointer">
                     <a onClick={() =>  {
                         if (props.slider < props.featuresSlide.length) {
-                            props.modifySlider(1)  }}}>
+                            props.modifySlider(1)
+                        } else { 
+                                props.modifySlider(-2)}
+                            }}> 
                         <span className="arrows-slider"><i className="fas fa-angle-right"></i></span>
                     </a>
                 </div>

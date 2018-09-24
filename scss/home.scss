@@ -118,6 +118,7 @@ li {
   background: #FEF9DC;
   display: inline-block;
   width: 100%;
+  height: 550px;
   transition: all 0.5s ease;
 }
 
@@ -188,10 +189,10 @@ li {
 }
 
 .bullet-slider {
-  width: 15px;
+  width: 12px;
   border-radius: 50%;
   background-color: #928f7c;
-  height: 15px;
+  height: 12px;
   display: inline-block;
   margin: 0px 3px;
   transition: background-color 0.9s ease;
@@ -199,10 +200,10 @@ li {
 }
 
 .bullet-slider-active {
-  width: 15px;
+  width: 12px;
   border-radius: 50%;
   background-color: #424034;
-  height: 15px;
+  height: 12px;
   display: inline-block;
   margin: 0px 3px;
   transition: background-color 0.9s ease;
@@ -233,6 +234,11 @@ li {
   margin: 10px;
   color: #4c382d;
   font-weight: bold;
+}
+
+.small-btn:hover {
+  background-color: #e6e1d4;
+  transition: background-color 0.1s ease;
 }
 
 .text-button {
