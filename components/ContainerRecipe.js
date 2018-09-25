@@ -3,6 +3,16 @@
 
 import React, { Component } from 'react';
 import Layout from "../HOC/Layout";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { fas, faCannabis } from '@fortawesome/free-solid-svg-icons'
+// import { faCannabis as farCannabis} from '@fortawesome/free-regular-svg-icons'
+import { library } from '@fortawesome/fontawesome-svg-core'
+
+
+
+ 
+library.add(fas, faCannabis)
+
 
 let print = () =>{
     window.print()
@@ -10,7 +20,7 @@ let print = () =>{
 
 const ContainerRecipe = props => {  
 
-    if(props.currentRecipe != null) {
+    // if(props.currentRecipe != null) {
     let recipe = props.currentRecipe == null ? props.recipes[0]: props.recipes[props.currentRecipe];
 
     let containerStyle = props.currentRecipe == null ? {
@@ -58,9 +68,13 @@ const ContainerRecipe = props => {
         let counter = 0;        
         while (counter < 5) {
              if (counter < recipe.rating){
-                arr.push(<i key={counter} className="fas fa-cannabis rating-icons"></i>) 
+                arr.push(
+                <FontAwesomeIcon icon={faCannabis} className='rating-icons' />) 
             } else {
-                arr.push(<i key={counter} className="far fa-cannabis rating-icons"></i>)
+                arr.push(
+                <i key={counter} className="far fa-cannabis rating-icons"></i>
+                // <FontAwesomeIcon icon={farCannabis} className='rating-icons' />                
+                )
             }
             counter++
         }    
@@ -167,7 +181,8 @@ const ContainerRecipe = props => {
         </div>
         </Layout>
         
-    ); } else { return null }
+    ); 
+// } else { return null }
 }
 
 export default ContainerRecipe;

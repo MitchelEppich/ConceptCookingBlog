@@ -21,5 +21,5 @@ const MoreRecipes = props => {
         );
     }
 
-    
+     
 export default MoreRecipes;

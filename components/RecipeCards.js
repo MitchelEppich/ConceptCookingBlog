@@ -42,7 +42,7 @@ const RecipeCards = props => {
              let showMoreRecipes = () => {            
              let moreRecipes = props.recipes;
              let arr = [];                                  
-             for (let i = 4; i < moreRecipes.length; i++){          
+             for (let i = 4; i < 8; i++){           // show all -> moreRecipes.length
                  arr.push(<RecipeItem  
                      imgsrc={props.recipes[i].featuredImage}
                      subtitle={`${props.recipes[i].title} ${props.recipes[i].subtitle}`}
